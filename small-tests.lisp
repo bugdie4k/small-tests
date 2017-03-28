@@ -65,7 +65,7 @@ will not change for the rest of the test. Initial values are rebound for each se
                                     (:no-error (ret-val) (declare (ignore ret-val)) (push ',test-full-name passed-test-func-names) ".")))
                          test-func-calls)
                    ;; if there are 30 dots and exses in a row push format with newline to a call
-                   (when (= n 30)
+                   (when (= n 50)
                      (setf n 1)
                      (push `(format t "~%") test-func-calls))
                    ;; make list of 'deftests'
@@ -79,7 +79,8 @@ will not change for the rest of the test. Initial values are rebound for each se
             `((defun ,lab-test-name ()
                 (let ((failed-test-func-names)
                       (passed-test-func-names))
-                  (format t "*** ~A ***~%" ',lab-test-name)
+                  (format t "--------------------------------------------------~%")
+                  (format t "~A:~%" ',lab-test-name)
                   ;; calling functions test functions
                   ,@(reverse (cons '(format t "~%") test-func-calls))
                   ;; report passed tests

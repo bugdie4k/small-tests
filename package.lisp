@@ -1,4 +1,4 @@
 (defpackage #:small-tests
-  (:use #:cl)
+  (:use #:cl #:alexandria)
   (:export #:deftest
            #:deftests))
