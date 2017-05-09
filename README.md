@@ -1,21 +1,6 @@
-This is how output looks
+This is how output might look
 
 ```
---------------------------------------------------
-TEST-LEXER:
-........
-PASSED:
- + TEST-LEXER-CORRECT1
- + TEST-LEXER-CORRECT2
- + TEST-LEXER-CORRECT3
- + TEST-LEXER-ERROR-ONE-CHAR
- + TEST-LEXER-ERROR-EMPTY-FILE
- + TEST-LEXER-ERROR-UNEXPECTED-EOF1
- + TEST-LEXER-ERROR-UNEXPECTED-EOF2
- + TEST-LEXER-WITH-LABELS
-FAILED:
- - NONE
-
 --------------------------------------------------
 TEST-PARSER:
 ...........
@@ -36,3 +21,9 @@ FAILED:
 
 T
 ```
+
+And this is how i used it.  
+When you see a failed test, you can copy it's name and call it as function (because it is a function name indeed) to examine the cause of failure.  
+  
+![usecase](https://cloud.githubusercontent.com/assets/22116479/25864807/713de004-34f9-11e7-851b-76adabc7ad44.png "usecase")
+
