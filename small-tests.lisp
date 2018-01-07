@@ -1,5 +1,12 @@
 ;;;; small testing framework as in PCL
 
+(in-package #:cl-user)
+
+(defpackage #:small-tests
+  (:use #:cl #:alexandria)
+  (:export #:deftest
+           #:deftests))
+
 (in-package #:small-tests)
 
 (defmacro deftest (test-name let-list form-tested form-expected test-fn)
